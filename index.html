@@ -7,30 +7,23 @@
 
     <style>
 
-        body{
-            background: url('./img/bg-social-media.jpeg');
-            background-size: cover;
-        }
-
         .title-container{
+            margin-top: 30px;
             border: none;
             border-radius: 30px;
-            width: 400px;
             margin-left: auto;
             margin-right: auto;
-            background-color: #D9AFD9;
-            background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+           
         }
 
         .title{
-            color: white;
             text-align: center;
             font-size: 50px;
             margin: 0;
         }
 
         .img-container{
-            margin-top: 40px;
+            margin-top: 80px;
         }
 
         .img-social-media{
@@ -49,6 +42,7 @@
 
         .btn-container{
             margin-top: 80px;
+            margin-bottom: 80px;
             display: flex;
             justify-content: space-around;
         }
@@ -58,40 +52,52 @@
             padding: 10px;
             border-radius: 30px;
             font-size: 20px;
-            border: 1px solid black;
-            background-color: transparent;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border: 2px solid black;
             cursor: pointer;
+            background-image: radial-gradient( circle 321px at 8.3% 75.7%,  rgba(209,247,241,1) 0%, rgba(249,213,213,1) 81% );
         }
 
         .btn:hover{
-            border: none;
-            color: white;
-            box-shadow: 2px 2px 7px 2px white;
+            border: 1px solid black;
+            box-shadow: 3px 3px 10px 4px rgb(49, 49, 49);
         }
 
-        .btn-insta{
+        .bg-insta{
+            background-size: cover;
+            background-repeat: no-repeat;
             background-color: #FBDA61;
             background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
         }
 
-        .btn-fb{
-            background: #0575E6; 
-            background: -webkit-linear-gradient(to right, #021B79, #0575E6); 
-            background: linear-gradient(to right, #021B79, #0575E6); 
+        .bg-fb{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background: #141E30;  /* fallback for old browsers */
+            background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%); 
         }
 
-        .btn-wp{
-            background-color: #08AEEA;
-            background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+        .bg-wp{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background: #11998e;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         }
 
-        .btn-twit{
-            background: #457fca;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        .bg-twit{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background: #076585;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         }
 
-        .btn-snap{
+        .bg-snap{
+            background-size: cover;
+            background-repeat: no-repeat;
             background: #fffc00;
             background: -webkit-linear-gradient(to right, #ffffff, #fffc00); 
             background: linear-gradient(to right, #ffffff, #fffc00); 
@@ -104,31 +110,36 @@
         function instagram()
         {
             document.getElementById("img-social-media").src="./img/instagram.png";
+            document.getElementById("body-container").className = 'bg-insta';
         }
 
         function facebook()
         {
             document.getElementById("img-social-media").src="./img/facebook.png";
+            document.getElementById("body-container").className = 'bg-fb';
         }
 
         function whatsapp()
         {
             document.getElementById("img-social-media").src="./img/whatsapp.png";
+            document.getElementById("body-container").className = 'bg-wp';
         }
 
         function twitter()
         {
             document.getElementById("img-social-media").src="./img/twitter.png";
+            document.getElementById("body-container").className = 'bg-twit';
         }
 
         function snapchat()
         {
             document.getElementById("img-social-media").src="./img/snapchat.png";
+            document.getElementById("body-container").className = 'bg-snap';
         }
 
     </script>
 
-    <body>
+    <body class="bg-insta" id="body-container">
         
         <div class="title-container">
 
@@ -149,7 +160,7 @@
             </button>
 
             <button class="btn btn-fb" onClick="facebook()">
-                Facebook 😇📖
+                Facebook 📖
             </button>
 
             <button class="btn btn-wp" onClick="whatsapp()">
@@ -165,7 +176,7 @@
             </button>
 
         </div>
-        
+
     </body>
 
 </html>
